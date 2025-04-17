@@ -1,0 +1,34 @@
+/* Custom styles that extend Tailwind */
+.candidate-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.candidate-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-card.selected {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Transaction status */
+.tx-status {
+    display: none;
+}
+
+.tx-status.active {
+    display: block;
+}
